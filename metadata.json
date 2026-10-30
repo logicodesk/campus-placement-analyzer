@@ -1,6 +1,0 @@
-{
-  "name": "Campus Placement Readiness Analyzer",
-  "description": "AI-powered student employability intelligence platform with diagnostic assessments, skill gap analysis, adaptive preparation roadmaps, and placement-cell analytics.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
