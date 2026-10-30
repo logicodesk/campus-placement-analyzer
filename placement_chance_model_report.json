@@ -1,0 +1,142 @@
+{
+  "dataset": "placement_chance_prediction_dataset.csv",
+  "sha256": "e8ef169ff7c1b6f8027b5ca741e2551ee1d01e073eebda47b1a37df3ab6bb5ab",
+  "rows": 1200,
+  "columns": [
+    "CGPA",
+    "Internships",
+    "Coding_Hours_Per_Week",
+    "Projects_Completed",
+    "Certifications",
+    "Communication_Skills_Rating",
+    "Aptitude_Test_Score",
+    "Hackathon_Participation",
+    "Placement_Chance"
+  ],
+  "labelCounts": {
+    "Low": 7,
+    "Medium": 299,
+    "High": 894
+  },
+  "trainRows": 960,
+  "testRows": 240,
+  "split": "stratified 80/20 holdout, seed 20261022",
+  "multinomialLogisticRegression": {
+    "accuracy": 0.9708333333333333,
+    "macroF1": 0.8096417083151001,
+    "balancedAccuracy": 0.9795779019242706,
+    "logLoss": 0.10414847304753219,
+    "perClass": {
+      "Low": {
+        "count": 1,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "Medium": {
+        "count": 60,
+        "precision": 0.9206349206349206,
+        "recall": 0.9666666666666667,
+        "f1": 0.943089430894309
+      },
+      "High": {
+        "count": 179,
+        "precision": 1.0,
+        "recall": 0.9720670391061452,
+        "f1": 0.9858356940509915
+      }
+    },
+    "confusionMatrix": {
+      "Low": {
+        "Low": 1,
+        "Medium": 0,
+        "High": 0
+      },
+      "Medium": {
+        "Low": 2,
+        "Medium": 58,
+        "High": 0
+      },
+      "High": {
+        "Low": 0,
+        "Medium": 5,
+        "High": 174
+      }
+    }
+  },
+  "trainAccuracy": 0.9760416666666667,
+  "featureImportance": [
+    {
+      "feature": "Internships",
+      "coefficients": {
+        "Low": -3.604466353265411,
+        "Medium": 0.1479812585439523,
+        "High": 3.456485094721455
+      },
+      "importance": 4.99613504168315
+    },
+    {
+      "feature": "CGPA",
+      "coefficients": {
+        "Low": -2.8110807292482627,
+        "Medium": -0.3494533708377231,
+        "High": 3.1605341000859823
+      },
+      "importance": 4.244204085873711
+    },
+    {
+      "feature": "Projects_Completed",
+      "coefficients": {
+        "Low": -2.7630591589035185,
+        "Medium": -0.008304567948342391,
+        "High": 2.771363726851856
+      },
+      "importance": 3.9134411696050364
+    },
+    {
+      "feature": "Aptitude_Test_Score",
+      "coefficients": {
+        "Low": -2.6783708625622955,
+        "Medium": 0.08820127484670759,
+        "High": 2.5901695877155873
+      },
+      "importance": 3.726986508619801
+    },
+    {
+      "feature": "Coding_Hours_Per_Week",
+      "coefficients": {
+        "Low": -2.008126466143719,
+        "Medium": -0.604115231389823,
+        "High": 2.6122416975335456
+      },
+      "importance": 3.349825936247581
+    },
+    {
+      "feature": "Hackathon_Participation",
+      "coefficients": {
+        "Low": -1.6850366315575152,
+        "Medium": 0.0409393114153939,
+        "High": 1.6440973201421234
+      },
+      "importance": 2.3545871134889818
+    },
+    {
+      "feature": "Communication_Skills_Rating",
+      "coefficients": {
+        "Low": -1.6193599454957857,
+        "Medium": 0.24943016220315975,
+        "High": 1.3699297832926292
+      },
+      "importance": 2.135708231487859
+    },
+    {
+      "feature": "Certifications",
+      "coefficients": {
+        "Low": -1.1242054550765601,
+        "Medium": 0.023369722417039673,
+        "High": 1.1008357326595182
+      },
+      "importance": 1.5736020333774876
+    }
+  ]
+}
